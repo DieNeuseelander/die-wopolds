@@ -255,8 +255,12 @@ export const GlobalStyles = createGlobalStyle`
     letter-spacing: 1px;
     color: #282828;
     text-transform: uppercase;
-    line-height: 40px;
     margin-top: 10px;
+  }
+  @media screen and (min-width: 768px) {
+    h1{
+        line-height: 40px;
+    }
   }
   h2 {
     margin-left: 0;
@@ -611,7 +615,13 @@ export const GlobalStyles = createGlobalStyle`
   }
   @media only screen and (max-width: 480px) {
     html {
-      font-size: 100%;
+      // font-size: 100%;
+    }
+    p {
+        font-size: 100%;
+    }
+    h1{
+        font-size: 1.1rem
     }
   }
 }

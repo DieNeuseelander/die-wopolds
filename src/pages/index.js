@@ -2,10 +2,12 @@ import * as React from "react"
 import SEO from "../components/SEO/SEO"
 import Layout from "../components/Layout/Layout";
 import Hero from "../components/Hero/Hero";
+import ExternalLinksArea from "../components/ExternalLinkArea/ExternalLinksArea";
 
 const IndexPage = () => (
   <Layout>
       <Hero/>
+      <ExternalLinksArea/>
   </Layout>
 )
 

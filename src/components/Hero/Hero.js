@@ -4,17 +4,17 @@ import {useHeroQuery} from "../../hooks/useHeroQuery";
 import {Wrapper, HeaderWrapper, StyledImg} from "./Hero.styles";
 
 const Hero = () => {
-    const { mdx: {frontmatter : data}} = useHeroQuery();
-    console.log(data);
+    const { mdx: {frontmatter : heroData}} = useHeroQuery();
+    console.log(heroData);
 
-    const imageData = getImage(data.image.childImageSharp.gatsbyImageData);
+    const imageData = getImage(heroData.image.childImageSharp.gatsbyImageData);
 
     return(
         <Wrapper>
             <StyledImg image={imageData} alt="Hero Image"/>
             <HeaderWrapper>
                 <h1>
-                    {data.title}
+                    {heroData.title}
                 </h1>
             </HeaderWrapper>
         </Wrapper>
