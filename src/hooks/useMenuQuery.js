@@ -14,7 +14,7 @@ export const useMenuQuery = () => {
           menu{
             items {
               name
-              url
+              slug
             }
           }
         }

@@ -7,7 +7,7 @@ const Navigation = ({ menu }) => (
         <ul>
             {menu.items.map(item =>
                 <li key={item.name}>
-                    <Link to={item.url} activeClassName="nav-activate">
+                    <Link to={`/${item.slug}`} activeClassName="nav-activate">
                         {item.name}
                     </Link>
                 </li>

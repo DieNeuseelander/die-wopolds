@@ -16,7 +16,7 @@ const OverlayMenu = ({ menuOpen, callback }) => {
                 <ul className="overlayMenu">
                     {data.map(item => (
                         <li key={item.name}>
-                            <Link to={item.url} activeClassName="overlayActive">
+                            <Link to={`/${item.slug}`} activeClassName="overlayActive">
                                 {item.name}
                             </Link>
                         </li>
