@@ -12,7 +12,9 @@ const OverlayMenu = ({ menuOpen, callback }) => {
     return(
         <Overlay menuOpen = {menuOpen}>
             <div className="inner">
-                <img className="invertedLogo" src={InvertedLogo} alt="white-logo"/>
+                <Link to="/">
+                    <img className="invertedLogo" src={InvertedLogo} alt="white-logo"/>
+                </Link>
                 <ul className="overlayMenu">
                     {data.map(item => (
                         <li key={item.name}>

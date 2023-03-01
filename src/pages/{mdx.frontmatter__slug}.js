@@ -3,6 +3,7 @@ import {graphql} from "gatsby"
 import styled from "styled-components"
 import Layout from "../components/Layout/Layout";
 import PageHero from "../components/PageHero/PageHero";
+import Timeline from "../components/Timeline/Timeline";
 
 //Styling
 
@@ -10,14 +11,24 @@ const Wrapper = styled.div`
     max-width; 1180px;
     margin: 0 auto;
     padding: 20px;
+    text-align: center;
+    
+    h1 {
+        // font-family: 'Cormorant Garamond', serif;
+        margin: 30px auto;
+    }
+    
+    @media (max-width: 767px){
+        padding: 0;
+        
+        h1{
+            font-size: 2rem;
+        }
+    }
 `
 
 const ContentWrapper = styled.div`
     display: block;
-    
-    @media(min-width: 992px) {
-        display: flex;
-    }
 `
 
 const PageContent = styled.article`
@@ -27,25 +38,33 @@ const PageContent = styled.article`
 //Site
 
 // data = pageQuery
-const PageTemplate = ({data}) => (
-    <Layout>
-        {data.allMdx.nodes[0].frontmatter.image ? (
-            <PageHero
-                img={
-                    data.allMdx.nodes[0].frontmatter.image.childImageSharp
-                        .gatsbyImageData
-                }
-            />
-        ) : null}
-        <Wrapper>
-            <ContentWrapper>
-                <PageContent>
-                    <p>Content</p>
-                </PageContent>
-            </ContentWrapper>
-        </Wrapper>
-    </Layout>
-)
+const PageTemplate = ({data}) => {
+    const frontmatterData = data.allMdx.nodes[0].frontmatter;
+
+    return (
+        <Layout>
+            {frontmatterData.image ? (
+                <PageHero
+                    img={
+                        frontmatterData.image.childImageSharp
+                            .gatsbyImageData
+                    }
+                />
+            ) : null}
+
+            <Wrapper>
+                <h1>{frontmatterData.title}</h1>
+                <ContentWrapper>
+                    <PageContent>
+                        {frontmatterData.title === "Programm" &&
+                        <Timeline timelineItems={frontmatterData.content.timelineItems}/>}
+                    </PageContent>
+                </ContentWrapper>
+            </Wrapper>
+
+        </Layout>
+    )
+}
 
 export default PageTemplate;
 
@@ -65,6 +84,18 @@ export const pageQuery = graphql`
             image {
               childImageSharp {
                 gatsbyImageData
+              }
+            }
+            content {
+              timelineItems {
+                icon
+                step
+                text
+              }
+              locations
+              faqs {
+                answer
+                question
               }
             }
           }

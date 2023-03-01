@@ -8,7 +8,7 @@ module.exports = {
         author: `@LouisaReinger`
     },
     plugins: ["gatsby-plugin-image", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp",
-        `gatsby-plugin-react-helmet`,
+        // `gatsby-plugin-react-helmet`,
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-mdx`,
 
