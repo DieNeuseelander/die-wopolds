@@ -9,13 +9,11 @@ export const useMenuQuery = () => {
           title
         }
       }
-      mdx(internal: {contentFilePath: {regex: "/menu/"}}) {
-        frontmatter {
-          menu{
-            items {
-              name
-              slug
-            }
+      allMdx(filter: {frontmatter: {individual_type: {eq: "menu-page"}}}) {
+        nodes{
+          frontmatter {
+            slug
+            title
           }
         }
       }

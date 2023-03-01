@@ -2,11 +2,11 @@ import React from 'react'
 import {Link} from 'gatsby';
 import Navigation from "../Navigation/Navigation";
 import Logo from '../../images/logo.svg'
-import {useMenuQuery} from "../../hooks/useMenuQuery"
 import {Wrapper, Content} from "./Header.styles"
+import {useMenuQuery} from "../../hooks/useMenuQuery";
 
 const Header = () => {
-    const {site, mdx : {frontmatter: {menu}}} = useMenuQuery();
+    const {site, allMdx: {nodes : menuItems}} = useMenuQuery();
 
     return(
         <Wrapper>
@@ -14,7 +14,7 @@ const Header = () => {
                 <Link to="/">
                     <img src={Logo} alt={site.siteMetadata.title}/>
                 </Link>
-                <Navigation menu={menu}></Navigation>
+                <Navigation menuItems={menuItems}/>
             </Content>
         </Wrapper>
     )

@@ -26,7 +26,7 @@ export const Connector = styled.div`
     transform: translate(-50%, -50%);
     
     height: 60px;
-    width: 2px;
+    width: 1px;
     background-color: #767676;
     border-radius: 50%;
 `

@@ -3,11 +3,10 @@ import {Link} from "gatsby";
 import InvertedLogo from "../../images/logo-inverted.svg";
 import CloseButton from "../../images/close_btn.svg"
 import {Overlay} from "./OverlayMenu.styles";
-import {useMenuQuery} from "../../hooks/useMenuQuery.js";
+import {useMenuQuery} from "../../hooks/useMenuQuery";
 
 const OverlayMenu = ({ menuOpen, callback }) => {
-
-    const { mdx: {frontmatter : {menu : { items : data}}}} = useMenuQuery();
+    const {allMdx : {nodes : menuItems}} = useMenuQuery();
 
     return(
         <Overlay menuOpen = {menuOpen}>
@@ -16,10 +15,10 @@ const OverlayMenu = ({ menuOpen, callback }) => {
                     <img className="invertedLogo" src={InvertedLogo} alt="white-logo"/>
                 </Link>
                 <ul className="overlayMenu">
-                    {data.map(item => (
-                        <li key={item.name}>
-                            <Link to={`/${item.slug}`} activeClassName="overlayActive">
-                                {item.name}
+                    {menuItems.map(item => (
+                        <li key={item.frontmatter.title}>
+                            <Link to={`${item.frontmatter.slug}`} activeClassName="overlayActive">
+                                {item.frontmatter.title}
                             </Link>
                         </li>
                     ))}
