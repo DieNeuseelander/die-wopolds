@@ -44,16 +44,16 @@ export const ContactCardTextWrapper = styled.div`
 
 export const ExtLinkImageTitle = styled.p`
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   margin-bottom: 4px;
   padding: 0px;
-  text-decoration-line: underline;  
+  font-family: 'Cormorant Garamond',serif;
+  font-weight: bold;
 `
 
 export const ExtLinkImageText = styled.p`
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cormorant Garamond',serif;
   font-size: 1rem;
   margin: -2px;
   padding: 0px;
