@@ -1,6 +1,6 @@
 import React from "react"
 import { HamburgerButton } from "./Hamburger.styles"
-import HamburgerIcon from "../../images/menu-icon.svg"
+import HamburgerIcon from "../../images/icon_menu.svg"
 
 const Hamburger = ({ handleOverlayMenu }) => (
     <HamburgerButton onClick={handleOverlayMenu}>

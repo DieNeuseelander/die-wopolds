@@ -2,8 +2,8 @@ import React from "react";
 import {
     StyledImg,
     Wrapper,
-    ExtLinkImageText,
-    ContactCardTextWrapper, ExtLinkImageTitle
+    CardText,
+    CardTextWrapper, CardTitle
 } from "./ContactCard.styles"
 
 const ContactCard = ({contactContent}) => {
@@ -18,11 +18,11 @@ const ContactCard = ({contactContent}) => {
                     style={{position: 'initial'}}
                 />
             </a>
-            <ContactCardTextWrapper>
-                <ExtLinkImageTitle> {contactContent.name} </ExtLinkImageTitle>
-                <ExtLinkImageText> {contactContent.mail}</ExtLinkImageText>
-                <ExtLinkImageText>{contactContent.tel}</ExtLinkImageText>
-            </ContactCardTextWrapper>
+            <CardTextWrapper>
+                <CardTitle>{contactContent.name}</CardTitle>
+                <CardText>{contactContent.mail}</CardText>
+                <CardText>{contactContent.tel}</CardText>
+            </CardTextWrapper>
         </Wrapper>
     )
 }

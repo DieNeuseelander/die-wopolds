@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
   }
 `
 
-export const ContactCardTextWrapper = styled.div`
+export const CardTextWrapper = styled.div`
   color: #212121;
   width: 100%;
   height: 100%;
@@ -42,8 +42,7 @@ export const ContactCardTextWrapper = styled.div`
   margin-bottom: 30px;
 `
 
-export const ExtLinkImageTitle = styled.p`
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+export const CardTitle = styled.p`
   font-size: 1.2rem;
   margin-bottom: 4px;
   padding: 0px;
@@ -51,8 +50,7 @@ export const ExtLinkImageTitle = styled.p`
   font-weight: bold;
 `
 
-export const ExtLinkImageText = styled.p`
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+export const CardText = styled.p`
   font-family: 'Cormorant Garamond',serif;
   font-size: 1rem;
   margin: -2px;

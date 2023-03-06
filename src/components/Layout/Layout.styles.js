@@ -621,7 +621,7 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 100%;
     }
     h1{
-        font-size: 1.1rem
+        font-size: 1.5rem
     }
   }
 }

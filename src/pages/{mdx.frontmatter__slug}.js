@@ -5,6 +5,7 @@ import Layout from "../components/Layout/Layout";
 import PageHero from "../components/PageHero/PageHero";
 import Timeline from "../components/Timeline/Timeline";
 import ContactCardsArea from "../components/ContactCardsArea/ContactCardsArea";
+import FaqAccordionArea from "../components/FaqAccordionArea/FaqAccordionArea";
 
 //Styling
 
@@ -55,6 +56,10 @@ const PageTemplate = ({data}) => {
 
                         {frontmatterData.title === "Kontakte" &&
                         <ContactCardsArea contactItems={frontmatterData.content.contacts}/>}
+
+                        {frontmatterData.title === "FAQ's" &&
+                        <FaqAccordionArea faqItems={frontmatterData.content.faqs}/>}
+
                     </PageContent>
                 </ContentWrapper>
             </Wrapper>
