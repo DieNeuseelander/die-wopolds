@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Layout from "../components/Layout/Layout";
 import PageHero from "../components/PageHero/PageHero";
 import Timeline from "../components/Timeline/Timeline";
+import ContactCardsArea from "../components/ContactCardsArea/ContactCardsArea";
 
 //Styling
 
@@ -16,14 +17,6 @@ const Wrapper = styled.div`
     h1 {
         // font-family: 'Cormorant Garamond', serif;
         margin: 30px auto;
-    }
-    
-    @media (max-width: 767px){
-        padding: 0;
-        
-        h1{
-            font-size: 2rem;
-        }
     }
 `
 
@@ -56,8 +49,12 @@ const PageTemplate = ({data}) => {
                 <h1>{frontmatterData.title}</h1>
                 <ContentWrapper>
                     <PageContent>
+
                         {frontmatterData.title === "Programm" &&
                         <Timeline timelineItems={frontmatterData.content.timelineItems}/>}
+
+                        {frontmatterData.title === "Kontakte" &&
+                        <ContactCardsArea contactItems={frontmatterData.content.contacts}/>}
                     </PageContent>
                 </ContentWrapper>
             </Wrapper>
@@ -75,7 +72,7 @@ export default PageTemplate;
 export const pageQuery = graphql`
     query($id: String) {
       allMdx(
-        filter: {internal: {contentFilePath: {regex: "/pages/"}}, id: {eq: $id}}
+        filter: {frontmatter: {individual_type: {regex: "/(footer-page)|(menu-page)/"}, slug: {ne: null}}, id: {eq: $id}}
         ) {
         nodes {
           frontmatter {
@@ -96,6 +93,17 @@ export const pageQuery = graphql`
               faqs {
                 answer
                 question
+              }
+              contacts {
+                mail
+                tel
+                name
+                role
+                pic {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                }
               }
             }
           }
