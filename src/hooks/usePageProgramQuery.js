@@ -16,7 +16,11 @@ export const usePageProgramQuery = () => {
             }
             content {
               timelineItems {
-                icon
+                icon{
+                    childImageSharp {
+                      gatsbyImageData
+                    }
+                }
                 step
                 text
               }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {GatsbyImage} from "gatsby-plugin-image";
 
 export const TextWrapper = styled.div`
     flex: 2;
@@ -11,10 +12,18 @@ export const TextWrapper = styled.div`
     }
 `
 
+export const StyledImg = styled(GatsbyImage)`
+    max-width: 150px;
+    img{
+        object-fit: contain !important;s
+    }
+`
+
 export const IconWrapper = styled.div`
     flex: 2;
     text-align: end;
     margin: auto;
-    background-color: #e8e8e8;
-    color: #212121;
+    
+    position: relative !important;
+    display: inline-block;
 `

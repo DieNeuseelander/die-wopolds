@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {IconWrapper, TextWrapper} from "./TimelineContent.styles";
+import {StyledImg} from "./TimelineContent.styles";
 
 export const TimelineText = ({children}) => {
     return (
@@ -9,10 +10,10 @@ export const TimelineText = ({children}) => {
     )
 }
 
-export const TimelineIcon = ({children}) => {
+export const TimelineIcon = ({icon}) => {
     return (
         <IconWrapper>
-            {children}
+            <StyledImg image={icon.childImageSharp.gatsbyImageData} alt="program icon"/>
         </IconWrapper>
     )
 }
