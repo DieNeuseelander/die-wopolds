@@ -1,11 +1,17 @@
 import {useStaticQuery, graphql} from "gatsby";
 
 
-export const useExternalLinksQuery = () => {
+export const useIndexBodyQuery = () => {
     const data = useStaticQuery(graphql`
-    query ExternalLinksQuery {
+    query IndexBodyQuery {
       mdx(internal: {contentFilePath: {regex: "/home_page/"}}) {
         frontmatter {
+         newspaper_image {
+              childImageSharp {
+                  gatsbyImageData
+              }
+          }
+          
           ext_link_1_image {
               childImageSharp {
                   gatsbyImageData

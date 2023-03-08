@@ -15,6 +15,10 @@ export const StyledImg = styled(GatsbyImage)`
     height: 200px;
     width: 200px;
   }
+  
+  :hover img {
+    transform: scale(1.1);
+  }
 `
 
 export const Wrapper = styled.div`
@@ -22,10 +26,6 @@ export const Wrapper = styled.div`
   flex-direction: column;
   position: relative;
   text-align: center;
-
-  :hover img {
-    transform: scale(1.1);
-  }
 `
 
 export const CardTextWrapper = styled.div`

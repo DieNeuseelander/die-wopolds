@@ -4,4 +4,5 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 export const StyledImg = styled(GatsbyImage)`
   height: 300px;
   width: 100%;
+  margin-bottom: 40px;
 `;
