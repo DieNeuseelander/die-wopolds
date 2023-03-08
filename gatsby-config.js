@@ -7,7 +7,7 @@ module.exports = {
         siteUrl: `https://www.die-wopolds.de`,
         author: `@LouisaReinger`
     },
-    plugins: ["gatsby-plugin-image", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp",
+    plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp",
         // `gatsby-plugin-react-helmet`,
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-mdx`,
@@ -27,18 +27,27 @@ module.exports = {
         },
 
         //Where should Gatsby search for data for queries:
+        // {
+        //     resolve: 'gatsby-source-filesystem',
+        //     options: {
+        //         "name": "images",
+        //         "path": "./src/images/"
+        //     },
+        //     __key: "images"
+        // },
+        // {
+        //     resolve: 'gatsby-source-filesystem',
+        //     options: {
+        //         "name": "pages",
+        //         "path": "./src/pages/"
+        //     },
+        //     __key: "pages"
+        // },
         {
-            resolve: 'gatsby-source-filesystem',
+            resolve: `gatsby-source-filesystem`,
             options: {
-                "name": "images",
-                "path": "./src/images/"
-            },
-            __key: "images"
-        }, {
-            resolve: 'gatsby-source-filesystem',
-            options: {
-                "name": "pages",
-                "path": "./src/pages/"
+                name: `pages`,
+                path: `${__dirname}/src/data/pages`
             },
             __key: "pages"
         },
@@ -49,5 +58,6 @@ module.exports = {
                 "path": `${__dirname}/src/data/`
             },
             __key: "data"
-        }]
+        }
+        ]
 };

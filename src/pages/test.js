@@ -33,7 +33,11 @@ const PageContent = styled.article`
 
 // data = pageQuery
 const PageTemplate = ({data}) => {
-    const frontmatterData = data.allMdx.nodes[0].frontmatter;
+    const frontmatterData = data.allMdx.nodes[0]?.frontmatter;
+
+    if(frontmatterData === undefined || frontmatterData.slug === "" || frontmatterData.slug === "/"){
+        return;
+    }
 
     return (
         <Layout>
@@ -77,7 +81,10 @@ export default PageTemplate;
 export const pageQuery = graphql`
     query($id: String) {
       allMdx(
-        filter: {frontmatter: {individual_type: {regex: "/(footer-page)|(menu-page)/"}, slug: {ne: null}}, id: {eq: $id}}
+        filter: {
+            frontmatter: {individual_type: {regex: "/(footer-page)|(menu-page)/"},
+                slug: {ne: null}},
+            id: {eq: $id}}
         ) {
         nodes {
           frontmatter {
