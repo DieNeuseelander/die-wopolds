@@ -6,17 +6,26 @@ export const usePageLocationQuery = () => {
     
     query PageLocationQuery {
       mdx(frontmatter: {slug: {eq: "/location"}}) {
-        frontmatter{
-            slug
-            title
-            image {
-              childImageSharp {
-                gatsbyImageData
+        frontmatter {
+          slug
+          title
+          image {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
+          content {
+            locations {
+              pic
+              title
+              points {
+                adress
+                title
+                url
+                type
               }
             }
-            content {
-              locations
-            }
+          }
         }
       }
     }`)

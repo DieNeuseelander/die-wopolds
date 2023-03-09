@@ -37,6 +37,7 @@ export const SpaceLeft = styled.div`
 
 export const SpaceRight = styled.div`
     flex: 2;
+    // flex: 3;
     
     @media (max-width: 764px){
         flex: 5;
