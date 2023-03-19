@@ -3,3 +3,4 @@ node_modules/
 public/page-data/**/page-data.json
 public/
 .idea/
+**/.DS_STORE

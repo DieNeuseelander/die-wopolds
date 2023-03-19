@@ -18,6 +18,7 @@ export const Wrapper = styled.div`
 export const StyledImg = styled(GatsbyImage)`
     max-width: 730px;
     margin: auto;
+    border: 5px solid black;
  
     img{
         object-fit: contain !important;
