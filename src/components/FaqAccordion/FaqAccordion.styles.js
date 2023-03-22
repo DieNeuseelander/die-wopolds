@@ -12,6 +12,7 @@ export const QuestionDiv = styled.div`
     background-color: #FBFBFB;
     padding: 10px 30px;
     position: relative;
+    cursor: pointer;
     
     >div:first-of-type{
         display: inline-block;

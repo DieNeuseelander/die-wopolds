@@ -14,17 +14,15 @@ export const usePageLocationQuery = () => {
               gatsbyImageData
             }
           }
-          content {
-            locations {
-              pic
+          locations {
+              adress
               title
-              points {
-                adress
-                title
-                url
-                type
+              url
+              img {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
               }
-            }
           }
         }
       }

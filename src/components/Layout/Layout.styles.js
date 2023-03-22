@@ -6,6 +6,13 @@ export const Primary = styled.main`
 
 export const GlobalStyles = createGlobalStyle`
 {
+  :root{
+    --vertical-space   : 40px;
+    --lateral_distance : 20px;
+    
+    --FONT_1           : 'Cormorant Garamond', serif;
+  }
+
   html {
     font-family: 'arial', sans-serif;
     -ms-text-size-adjust: 100%;
@@ -622,6 +629,7 @@ export const GlobalStyles = createGlobalStyle`
     }
     h1{
         font-size: 1.5rem
+        margin-bottom: 0;
     }
   }
 }

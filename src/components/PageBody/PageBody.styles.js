@@ -2,13 +2,11 @@ import styled from "styled-components"
 
 export const Wrapper = styled.div`
     max-width; 1180px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0 auto var(--vertical-space);
     text-align: center;
     
     h1 {
-        // font-family: 'Cormorant Garamond', serif;
-        margin: 30px auto;
+        margin: 30px auto var(--vertical-space) !important;
     }
 `
 
@@ -17,5 +15,4 @@ export const ContentWrapper = styled.div`
 `
 
 export const PageContent = styled.article`
-    margin-top: 20px;
 `

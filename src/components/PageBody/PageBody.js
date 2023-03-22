@@ -1,8 +1,7 @@
 import React from "react";
 import Layout from "../Layout/Layout";
 import PageHero from "../PageHero/PageHero";
-import {Wrapper} from "../ContactCard/ContactCard.styles";
-import {ContentWrapper, PageContent} from "./PageBody.styles";
+import {Wrapper, ContentWrapper, PageContent} from "./PageBody.styles";
 
 
 const PageBody = ({pageData, children}) => {
