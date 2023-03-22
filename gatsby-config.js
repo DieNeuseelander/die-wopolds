@@ -26,23 +26,19 @@ module.exports = {
             }
         },
 
+        //look of tab
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `Die Wopolds`,
+                short_name: `wopold`,
+                start_url: `/`,
+                display: `minimal-ui`,
+                icon: `src/images/heart.svg`,
+            }
+        },
+
         //Where should Gatsby search for data for queries:
-        // {
-        //     resolve: 'gatsby-source-filesystem',
-        //     options: {
-        //         "name": "images",
-        //         "path": "./src/images/"
-        //     },
-        //     __key: "images"
-        // },
-        // {
-        //     resolve: 'gatsby-source-filesystem',
-        //     options: {
-        //         "name": "pages",
-        //         "path": "./src/pages/"
-        //     },
-        //     __key: "pages"
-        // },
         {
             resolve: `gatsby-source-filesystem`,
             options: {
