@@ -9,6 +9,11 @@ export const Wrapper = styled.div`
   margin-bottom: 40px;
   text-align: center;
   
+  a{
+    color: #b77853;
+    text-decoration: underline;
+  }
+  
   li {
     list-style: none;
   }
@@ -26,4 +31,5 @@ export const Wrapper = styled.div`
        font-size: 1.1rem;
     }
   }
+ 
 `;

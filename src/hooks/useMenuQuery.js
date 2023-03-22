@@ -9,7 +9,10 @@ export const useMenuQuery = () => {
           title
         }
       }
-      allMdx(filter: {frontmatter: {individual_type: {eq: "menu-page"}}}) {
+      allMdx(
+        filter: {frontmatter: {individual_type: {eq: "menu-page"}}}
+        sort: {frontmatter: {position: ASC}}
+      ) {
         nodes{
           frontmatter {
             slug

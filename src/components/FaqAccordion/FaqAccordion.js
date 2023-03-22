@@ -7,13 +7,17 @@ const FaqAccordion = ({faqContent}) => {
 
     const [accOpen, setAccOpen] = useState(false);
 
+    const answer = faqContent.answer;
+
     return(
         <Wrapper>
             <QuestionDiv
                 onClick={() => setAccOpen(prevState => !prevState)}
                 onKeyDown={() => setAccOpen(prevState => !prevState)}
-            >{
-                faqContent.question}
+            >
+                <div>
+                    {faqContent.question}
+                </div>
 
                 <ButtonWrapper>
                     <IconButton>
@@ -24,7 +28,9 @@ const FaqAccordion = ({faqContent}) => {
             </QuestionDiv>
             {accOpen &&
                 <AnswerDiv>
-                    <div>{faqContent.answer}</div>
+                    <div>
+                        <div dangerouslySetInnerHTML={{__html: faqContent.answer}}/>
+                    </div>
                 </AnswerDiv>
             }
 
