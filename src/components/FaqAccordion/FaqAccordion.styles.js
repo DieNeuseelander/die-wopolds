@@ -5,14 +5,19 @@ export const Wrapper = styled.div`
   flex-direction: column;
   position: relative;
   text-align: center;
+  font-family: var(--FONT_1);
+  color: var(--COLOR_BLACK);
 `
 
 export const QuestionDiv = styled.div`
     border-bottom: 1px solid #BABABA;
-    background-color: #FBFBFB;
+    background-color: #F9F9F9;
     padding: 10px 30px;
     position: relative;
     cursor: pointer;
+    font-family: var(--FONT_2);
+    letter-spacing: 1px;
+    font-size: 0.82rem;
     
     >div:first-of-type{
         display: inline-block;

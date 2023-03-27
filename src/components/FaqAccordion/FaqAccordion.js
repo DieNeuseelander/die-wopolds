@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {AnswerDiv, ButtonWrapper, IconButton, QuestionDiv, Wrapper} from "./FaqAccordion.styles"
-import DownIcon from "../../images/icon_down.svg"
+import DownIcon from "../../images/icon_down_black.svg"
+
 
 
 const FaqAccordion = ({faqContent}) => {

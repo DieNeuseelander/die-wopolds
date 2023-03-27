@@ -18,7 +18,7 @@ export const Wrapper = styled.div`
   }
   
   h1 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--FONT_1);
     font-size: 1.3rem;
     margin-top: 30px;
   }

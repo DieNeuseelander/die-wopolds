@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.nav`
-  // font-family: 'Dancing Script', cursive;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--FONT_1);
   color: #212121;
   font-size: 1rem;
   font-weight: 600;

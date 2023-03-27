@@ -4,7 +4,7 @@ export const Wrapper = styled.ul`
     width: 100%;
     margin: 30px 0;
     list-style: none;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--FONT_2);
 `
 
 export const TimelineItem = styled.div`

@@ -10,13 +10,19 @@ export const GlobalStyles = createGlobalStyle`
     --vertical-space   : 40px;
     --lateral_distance : 20px;
     
-    --COLOR_DARK_GRAY  : #C6C6C6;
+    --COLOR_GRAY_LIGHT : #F3F3F3;
+    --COLOR_GRAY       : #C6C6C6;
+    --COLOR_GRAY_DARK  : #767676;
+    --COLOR_BLACK      : #000;
     
     --FONT_1           : 'Cormorant Garamond', serif;
+    --FONT_2           : 'Playfair Display', serif;
+    --FONT_3           : 'Teko', sans-serif;
   }
 
   html {
-    font-family: 'arial', sans-serif;
+    // font-family: 'arial', sans-serif;
+    font-family: var(--FONT_1);
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
   }
@@ -84,7 +90,8 @@ export const GlobalStyles = createGlobalStyle`
     font-style: italic;
   }
   h1 {
-    font-family: 'Teko', Arial, Helvetica, sans-serif;
+    // font-family: 'Teko', Arial, Helvetica, sans-serif;
+    font-family: var(--FONT_1);
     font-weight: 700;
     font-size: 2em;
     margin: 0.67em 0;
@@ -210,7 +217,8 @@ export const GlobalStyles = createGlobalStyle`
     font: inherit;
   }
   html {
-    font: 112.5%/1.45em arial, georgia, serif;
+    // font: 112.5%/1.45em arial, georgia, serif;
+    font: 112%/1.45em var(--FONT_1);
     box-sizing: border-box;
     overflow-y: scroll;
   }
@@ -225,7 +233,8 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     color: hsla(0, 0%, 0%, 0.8);
-    font-family: 'arial', georgia, serif;
+    // font-family: 'arial', georgia, serif;
+    font-family: var(--FONT_1);
     font-weight: normal;
     word-wrap: break-word;
     font-kerning: normal;
@@ -252,14 +261,15 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   p {
-    font-family: Arial, Helvetica, sans-serif;
+    // font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--FONT_1);
     font-size: 1.1rem;
     line-height: 1.7rem;
   }
 
   h1 {
     font-size: 2.2rem;
-    font-family: 'Teko', Arial;
+    font-family: var(--FONT_3);
     font-weight: 800;
     letter-spacing: 1px;
     color: #282828;
@@ -281,7 +291,8 @@ export const GlobalStyles = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Teko', Arial, Helvetica Neue, sans-serif;
+    // font-family: 'Teko', Arial, Helvetica Neue, sans-serif;
+    font-family: var(--FONT_1);
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1.62671rem;
@@ -297,8 +308,9 @@ export const GlobalStyles = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    //   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    font-family: var(--FONT_1);
     font-weight: bold;
     text-rendering: optimizeLegibility;
     font-size: 1.38316rem;
@@ -311,7 +323,8 @@ export const GlobalStyles = createGlobalStyle`
     letter-spacing: 1px;
   }
   h5 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    // font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: var(--FONT_1);
     font-size: 1rem;
     font-style: normal;
     font-variant: normal;

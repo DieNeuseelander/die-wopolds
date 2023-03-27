@@ -46,12 +46,12 @@ export const CardTitle = styled.p`
   font-size: 1.2rem;
   margin-bottom: 4px;
   padding: 0px;
-  font-family: 'Cormorant Garamond',serif;
+  font-family: var(--FONT_1);
   font-weight: bold;
 `
 
 export const CardText = styled.p`
-  font-family: 'Cormorant Garamond',serif;
+  font-family: var(--FONT_1);
   font-size: 1rem;
   margin: -2px;
   padding: 0px;

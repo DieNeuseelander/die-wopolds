@@ -37,13 +37,9 @@ export const ExtLinkImageTextWrapper = styled.div`
 
 export const ExtLinkImageText = styled.p`
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  // font-family: "Teko";
-  // font-family: 'Cormorant Garamond', serif;
-  font-family: 'Playfair Display', serif;
+  font-family: var(--FONT_2);
   font-weight: 700;
-  // letter-spacing: -2px;
   font-size: 1rem;
-  // text-transform: uppercase;
   margin: 0px;
   padding: 0px;
 

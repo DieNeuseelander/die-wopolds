@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.header`
-  background: #f3f3f3;
+  background: var(--COLOR_GRAY_LIGHT);
   height: 110px;
   border-bottom: 1px solid #e7e7e7;
   position: fixed;
@@ -19,7 +19,6 @@ export const Content = styled.div`
   padding: 0 20px;
 
   img {
-    // width: 200px;
     height: 100px;
     margin: 0;
     padding: 6.5px 0 0 0;

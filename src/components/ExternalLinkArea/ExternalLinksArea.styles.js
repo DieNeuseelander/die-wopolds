@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   text-align: center;
   
   h1 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--FONT_1);
     font-size: 1.1rem;
     margin-top: 30px;
   }

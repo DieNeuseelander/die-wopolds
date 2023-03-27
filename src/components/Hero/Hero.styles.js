@@ -23,7 +23,7 @@ export const HeaderWrapper = styled.div`
   width: 100%;
 
   h1 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: var(--FONT_1);
     font-size: 2rem;
     font-weight: 600;
     color: #fff;
