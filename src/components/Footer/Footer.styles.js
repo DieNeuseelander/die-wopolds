@@ -9,10 +9,17 @@ export const Wrapper = styled.footer`
   text-align: center;
   height: 200px;
 
-  p {
-    margin: 0;
-    padding: 0;
-    font-family: 'Cormorant Garamond', serif;
-    color: #fff;
+  // p {
+  //   margin: 0;
+  //   padding: 0;
+  //   font-family: 'Cormorant Garamond', serif;
+  //   color: #fff;
+  // }
+  
+  color: var(--COLOR_DARK_GRAY);
+  
+  img {
+    margin-bottom: -2px;
+    height: 17px;
   }
 `;

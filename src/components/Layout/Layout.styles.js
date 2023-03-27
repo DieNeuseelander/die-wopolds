@@ -10,6 +10,8 @@ export const GlobalStyles = createGlobalStyle`
     --vertical-space   : 40px;
     --lateral_distance : 20px;
     
+    --COLOR_DARK_GRAY  : #C6C6C6;
+    
     --FONT_1           : 'Cormorant Garamond', serif;
   }
 

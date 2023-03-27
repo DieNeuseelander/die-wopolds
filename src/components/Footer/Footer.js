@@ -1,16 +1,12 @@
 import React from "react";
 import { Wrapper } from "./Footer.styles";
-import {useFooterQuery} from "../../hooks/useFooterQuery";
-import {Link} from "gatsby";
+import Heart from '../../images/heart_gray.svg'
 
 const Footer = () => {
-    const { mdx: {frontmatter : data}} = useFooterQuery();
 
     return (
         <Wrapper>
-            <Link to={`${data.slug}`}>
-                <p>{data.title}</p>
-            </Link>
+            <span>2023, made with <img src={Heart} alt='Heart'/> by Louisa Reinger</span>
         </Wrapper>
     )
 }
