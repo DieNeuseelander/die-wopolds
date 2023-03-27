@@ -44,7 +44,7 @@ export const Overlay = styled.div`
 
       a {
         // font-family: 'Teko', Arial, Helvetica, sans-serif;
-        font-family: 'Cormorant Garamond', serif;
+        font-family: var(--FONT_1);
         font-size: 1.6rem;
         color: #9E9E9E;
         transition: all 0.3s ease;

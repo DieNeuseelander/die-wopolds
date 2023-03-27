@@ -11,13 +11,22 @@ const OverlayMenu = ({ menuOpen, callback }) => {
     return(
         <Overlay menuOpen = {menuOpen}>
             <div className="inner">
-                <Link to="/">
+                <Link
+                    to="/"
+                    onClick={callback}
+                    onKeyDown={callback}
+                >
                     <img className="invertedLogo" src={InvertedLogo} alt="white-logo"/>
                 </Link>
                 <ul className="overlayMenu">
                     {menuItems.map(item => (
                         <li key={item.frontmatter.title}>
-                            <Link to={`${item.frontmatter.slug}`} activeClassName="overlayActive">
+                            <Link
+                                to={`${item.frontmatter.slug}`}
+                                activeClassName="overlayActive"
+                                onKeyDown={callback}
+                                onClick={callback}
+                            >
                                 {item.frontmatter.title}
                             </Link>
                         </li>
