@@ -23,6 +23,13 @@ export const usePageContactQuery = () => {
                   childImageSharp {
                     gatsbyImageData
                   }
+                  publicURL
+                }
+                picHover{
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                  publicURL
                 }
               }
             }

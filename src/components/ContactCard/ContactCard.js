@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import {
     StyledImg,
+    ImageWrapper,
     Wrapper,
     CardText,
     CardTextWrapper, CardTitle
@@ -8,20 +9,39 @@ import {
 
 const ContactCard = ({contactContent}) => {
 
+    const [hoverIsActive, setHoverIsActive] = useState(false);
+
     return(
         <Wrapper>
-            <a href={"mailto:" + contactContent.mail}>
-                <StyledImg
-                    image={contactContent.pic.childImageSharp.gatsbyImageData}
-                    alt="External Link Image"
-                    width={720}
-                    style={{position: 'initial'}}
-                />
+            <a
+                href={"mailto:" + contactContent.mail}
+            >
+                <ImageWrapper
+                    onMouseEnter={() => setHoverIsActive(true)}
+                    onMouseLeave={() => setHoverIsActive(false)}
+                >
+                    {hoverIsActive === false
+                        ?
+                        <StyledImg
+                            image={contactContent.pic.childImageSharp.gatsbyImageData}
+                            alt={contactContent.name}
+                            width={720}
+                            style={{position: 'initial'}}
+                        />
+                        :
+                        <StyledImg
+                            image={contactContent.picHover.childImageSharp.gatsbyImageData}
+                            alt={contactContent.name}
+                            width={720}
+                            style={{position: 'initial'}}
+                        />
+                    }
+                </ImageWrapper>
             </a>
             <CardTextWrapper>
                 <CardTitle>{contactContent.name}</CardTitle>
-                <CardText>{contactContent.mail}</CardText>
-                <CardText>{contactContent.tel}</CardText>
+                {contactContent.mail !== "" && <CardText>{contactContent.mail}</CardText>}
+                {contactContent.tel !== "" && <CardText>{contactContent.tel}</CardText>}
             </CardTextWrapper>
         </Wrapper>
     )

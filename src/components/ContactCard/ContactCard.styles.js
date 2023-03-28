@@ -6,19 +6,32 @@ export const StyledImg = styled(GatsbyImage)`
   display: inline-block;
   text-align: center;
   overflow: initial;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
 
     
   img {
     margin: auto;
     transition: all 0.3s !important;
     border-radius: 50%;
-    height: 200px;
-    width: 200px;
   }
   
   :hover img {
     transform: scale(1.1);
   }
+`
+
+export const ImageWrapper = styled.div`
+    transition: all 1s ease!important;
+    display: inline-block;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    
+    :hover {
+        transform: scale(1.1);
+    }
 `
 
 export const Wrapper = styled.div`
@@ -40,6 +53,7 @@ export const CardTextWrapper = styled.div`
   text-align: center;
   margin-top: 20px;
   margin-bottom: 30px;
+  display: inline;
 `
 
 export const CardTitle = styled.p`
