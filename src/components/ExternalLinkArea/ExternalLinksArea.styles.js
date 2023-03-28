@@ -45,4 +45,10 @@ export const SectionWrapper = styled.div`
     margin: 0
     width: 100%
   }
+  
+  :first-of-type{
+      @media screen and (min-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+  }
 `;

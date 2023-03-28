@@ -52,11 +52,11 @@ export const ExtLinkImageText = styled.p`
   }
 
   @media (min-width: 992px) {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   @media (min-width: 1200px) {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   
 `

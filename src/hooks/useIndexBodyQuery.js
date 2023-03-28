@@ -33,13 +33,6 @@ export const useIndexBodyQuery = () => {
           }
           ext_link_3_text
           ext_link_3_link
-          ext_link_4_image {
-              childImageSharp {
-                  gatsbyImageData
-              }
-          }
-          ext_link_4_link
-          ext_link_4_text
         }
       }
     }
