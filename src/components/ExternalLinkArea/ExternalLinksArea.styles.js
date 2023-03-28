@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   padding: 0 20px;
   margin: 0 auto;
   margin-bottom: var(--vertical-space);
-  border-top: 1px solid #ddd;
+  // border-top: 1px solid #ddd;
   text-align: center;
   
   h1 {
