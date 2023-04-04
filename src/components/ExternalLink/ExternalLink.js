@@ -10,7 +10,7 @@ const ExternalLink = ({image, link, text}) => (
             width={720}
             style={{position: 'initial'}}
         />
-        <a href={link}>
+        <a href={link} target="_blank">
             <ExtLinkImageTextWrapper>
                 <ExtLinkImageText>
                     {text}
