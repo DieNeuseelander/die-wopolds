@@ -8,6 +8,7 @@ const ExternalLinksArea = () => {
 
     return(
         <Wrapper>
+            <h1>Du möchtest mitgestalten? Gerne!</h1>
             <SectionWrapper>
                 <ExternalLink
                     image={indexData[`ext_link_1_image`].childImageSharp.gatsbyImageData}
