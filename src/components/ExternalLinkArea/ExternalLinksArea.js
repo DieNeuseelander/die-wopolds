@@ -8,8 +8,15 @@ const ExternalLinksArea = () => {
 
     return(
         <Wrapper>
+            <SectionWrapper className="wholeWidth">
+                <ExternalLink
+                    image={indexData[`ext_link_0_image`].childImageSharp.gatsbyImageData}
+                    link={indexData[`ext_link_0_link`]}
+                    text={indexData[`ext_link_0_text`]}
+                />
+            </SectionWrapper>
             <h1>Du möchtest mitgestalten? Gerne!</h1>
-            <SectionWrapper>
+            <SectionWrapper className="wholeWidth">
                 <ExternalLink
                     image={indexData[`ext_link_1_image`].childImageSharp.gatsbyImageData}
                     link={indexData[`ext_link_1_link`]}

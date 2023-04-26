@@ -46,9 +46,10 @@ export const SectionWrapper = styled.div`
     width: 100%
   }
   
-  :first-of-type{
-      @media screen and (min-width: 768px) {
+  &.wholeWidth{
+    @media screen and (min-width: 768px) {
         grid-template-columns: 1fr;
       }
   }
+
 `;

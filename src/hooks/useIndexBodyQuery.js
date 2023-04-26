@@ -11,6 +11,13 @@ export const useIndexBodyQuery = () => {
                   gatsbyImageData
               }
           }
+          ext_link_0_image {
+              childImageSharp {
+                  gatsbyImageData
+              }
+          }
+          ext_link_0_text
+          ext_link_0_link
           
           ext_link_1_image {
               childImageSharp {
