@@ -7,7 +7,8 @@ import styled from "styled-components"
 
 const Wrapper = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    //grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
     gap: 40px;
     padding: 0 40px;
     max-width: calc(2 * 500px + 2*40px);
